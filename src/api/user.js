@@ -1,24 +1,26 @@
-import request from '@/utils/request'
+//引入axios(axios二次封装)
+import request from "@/utils/request";
 
+//对外暴露登录接口函数
 export function login(data) {
   return request({
-    url: '/vue-admin-template/user/login',
-    method: 'post',
-    data
-  })
+    url: "/admin/acl/index/login",
+    method: "post",
+    data,
+  });
 }
-
+//对外暴露获取用户信息的接口函数
 export function getInfo(token) {
   return request({
-    url: '/vue-admin-template/user/info',
-    method: 'get',
-    params: { token }
-  })
+    url: "/admin/acl/index/info",
+    method: "get",
+    params: { token },
+  });
 }
-
+//对外暴露退出登录的接口函数
 export function logout() {
   return request({
-    url: '/vue-admin-template/user/logout',
-    method: 'post'
-  })
+    url: "/admin/acl/index/logout",
+    method: "post",
+  });
 }
