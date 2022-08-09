@@ -32,3 +32,11 @@ export const reqAddorUpdateTradeMark = (trademark) => {
     });
   }
 };
+
+//删除品牌的操作
+/* /admin/product/baseTrademark/remove/{id} delete */
+export const reqDelteTradeMark = (id) =>
+  request({
+    url: `/admin/product/baseTrademark/remove/${id}`,
+    method: "delete",
+  });
